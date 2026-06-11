@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nossa História ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#111;
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url("foto-capa.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:3rem;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:1.2rem;
+max-width:600px;
+}
+
+.botao{
+margin-top:30px;
+padding:15px 25px;
+border:none;
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+}
+
+section{
+padding:60px 20px;
+}
+
+.card{
+max-width:800px;
+margin:auto;
+background:#1f1f1f;
+padding:25px;
+border-radius:20px;
+}
+
+.galeria{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+max-width:1000px;
+margin:auto;
+}
+
+.galeria img{
+width:100%;
+height:320px;
+object-fit:cover;
+border-radius:15px;
+}
+
+.contador{
+font-size:1.4rem;
+margin-top:20px;
+}
+
+audio{
+width:90%;
+max-width:500px;
+margin-top:20px;
+}
+
+footer{
+padding:40px;
+font-size:14px;
+color:#aaa;
+}
+
+</style>
+</head>
+<body>
+
+<div class="hero">
+
+<h1>❤️ Pablo & Juh ❤️</h1>
+
+<p>
+Te amo hoje, amanhã e pra sempre. Te amo até a Lua indo e voltando 😍🌙
+</p>
+
+<button class="botao"
+onclick="document.getElementById('inicio').scrollIntoView({behavior:'smooth'})">
+Ver Nossa História
+</button>
+
+</div>
+
+<section id="inicio">
+
+<div class="card">
+
+<h2>💌 Minha Mensagem</h2>
+
+<br>
+
+<p>
+Te amo muito meu amor
+</p>
+
+<div class="contador" id="contador"></div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>📸 Nossos Momentos</h2>
+
+<br><br>
+
+<div class="galeria">
+
+<img src="foto1.jpeg">
+<img src="foto2.jpeg">
+<img src="foto3.jpeg">
+<img src="foto5.jpeg">
+
+</div>
+
+</section>
+
+<section>
+
+<h2>🎵 Nossa Música</h2>
+
+<br>
+
+<audio controls loop>
+<source src="lua_pablo.mpeg" type="audio/mpeg">
+</audio>
+
+</section>
+
+<footer>
+
+@versapersonalizados_
+
+</footer>
+
+<script>
+
+const inicioRelacionamento =
+new Date("2024-05-04");
+
+function atualizar(){
+
+const hoje = new Date();
+
+const diff =
+hoje - inicioRelacionamento;
+
+const dias =
+Math.floor(diff / (1000*60*60*24));
+
+document.getElementById("contador")
+.innerHTML =
+`❤️ Estamos juntos há ${dias} dias ❤️`;
+
+}
+
+atualizar();
+setInterval(atualizar,1000);
+
+</script>
+
+</body>
+</html>
