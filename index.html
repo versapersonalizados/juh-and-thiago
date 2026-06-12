@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -20,6 +21,20 @@ background:#111;
 color:white;
 text-align:center;
 overflow-x:hidden;
+}
+
+.musica-topo{
+position:fixed;
+top:10px;
+left:50%;
+transform:translateX(-50%);
+z-index:9999;
+width:90%;
+max-width:450px;
+}
+
+.musica-topo audio{
+width:100%;
 }
 
 .hero{
@@ -87,12 +102,6 @@ font-size:1.4rem;
 margin-top:20px;
 }
 
-audio{
-width:90%;
-max-width:500px;
-margin-top:20px;
-}
-
 footer{
 padding:40px;
 font-size:14px;
@@ -102,6 +111,12 @@ color:#aaa;
 </style>
 </head>
 <body>
+
+<div class="musica-topo">
+<audio controls loop>
+<source src="lua_pablo.mpeg" type="audio/mpeg">
+</audio>
+</div>
 
 <div class="hero">
 
@@ -130,16 +145,6 @@ Ver Nossa História
 Te amo hoje, amanhã e pra sempre. Te amo até a Lua indo e voltando 😍🌙
 </p>
 
-<div class="galeria">
-
-<img src="foto1.jpeg">
-<img src="foto2.jpeg">
-<img src="foto3.jpeg">
-<img src="foto5.jpeg">
-<img src="foto4.jpeg">
-  
-</div>
-  
 <div class="contador" id="contador"></div>
 
 </div>
@@ -152,31 +157,26 @@ Te amo hoje, amanhã e pra sempre. Te amo até a Lua indo e voltando 😍🌙
 
 <br><br>
 
+<div class="galeria">
 
-</section>
+<img src="foto1.jpeg" alt="">
+<img src="foto2.jpeg" alt="">
+<img src="foto3.jpeg" alt="">
+<img src="foto5.jpeg" alt="">
+<img src="foto4.jpeg" alt="">
 
-<section>
-
-<h2>🎵 Nossa Música</h2>
-
-<br>
-
-<audio controls loop>
-<source src="lua_pablo.mpeg" type="audio/mpeg">
-</audio>
+</div>
 
 </section>
 
 <footer>
-
 @versapersonalizados_
-
 </footer>
 
 <script>
 
 const inicioRelacionamento =
-new Date("2024-05-04");
+new Date("2024-05-04T00:00:00");
 
 function atualizar(){
 
@@ -201,3 +201,4 @@ setInterval(atualizar,1000);
 
 </body>
 </html>
+```
