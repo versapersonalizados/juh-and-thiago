@@ -5,192 +5,220 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nossa História ❤️</title>
+<title>❤️ Pablo & Juh ❤️</title>
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-background:#111;
-color:white;
-text-align:center;
-overflow-x:hidden;
-}
-
-.musica-topo{
-position:fixed;
-top:10px;
-left:50%;
-transform:translateX(-50%);
-z-index:9999;
-width:90%;
-max-width:450px;
-}
-
-.musica-topo audio{
-width:100%;
+    background:#111;
+    color:white;
+    text-align:center;
+    overflow-x:hidden;
 }
 
 .hero{
-height:100vh;
-background:
-linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
-url("foto-capa.jpg");
-background-size:cover;
-background-position:center;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-padding:20px;
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("foto-capa.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
 }
 
 .hero h1{
-font-size:2rem;
-margin-bottom:15px;
+    font-size:2rem;
+    margin-bottom:15px;
 }
 
 .hero p{
-font-size:1.2rem;
-max-width:600px;
+    font-size:1.1rem;
+    max-width:650px;
+    line-height:1.6;
 }
 
 .botao{
-margin-top:30px;
-padding:15px 25px;
-border:none;
-border-radius:30px;
-font-size:18px;
-cursor:pointer;
+    margin-top:25px;
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
+    background:white;
+    color:#111;
+    transition:.3s;
+}
+
+.botao:hover{
+    transform:scale(1.05);
+}
+
+.hero audio{
+    width:90%;
+    max-width:400px;
+    margin-top:20px;
 }
 
 section{
-padding:60px 20px;
+    padding:70px 20px;
 }
 
 .card{
-max-width:800px;
-margin:auto;
-background:#1f1f1f;
-padding:25px;
-border-radius:20px;
+    max-width:800px;
+    margin:auto;
+    background:#1f1f1f;
+    padding:30px;
+    border-radius:20px;
 }
 
-.galeria{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
-max-width:1000px;
-margin:auto;
-}
-
-.galeria img{
-width:100%;
-height:320px;
-object-fit:cover;
-border-radius:15px;
+.card p{
+    line-height:1.8;
 }
 
 .contador{
-font-size:1.4rem;
-margin-top:20px;
+    margin-top:25px;
+    font-size:1.4rem;
+    font-weight:bold;
+}
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.galeria img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.galeria img:hover{
+    transform:scale(1.03);
 }
 
 footer{
-padding:40px;
-font-size:14px;
-color:#aaa;
+    padding:40px;
+    color:#aaa;
+    font-size:14px;
 }
 
 </style>
 </head>
 <body>
 
-<div class="musica-topo">
-<audio controls loop>
-<source src="lua_pablo.mpeg" type="audio/mpeg">
-</audio>
-</div>
-
 <div class="hero">
 
-<h1>❤️ Pablo & Juh ❤️</h1>
+    <h1>❤️ Pablo & Juh ❤️</h1>
 
-<p>
-Te amo hoje, amanhã e pra sempre. Te amo até a Lua indo e voltando 😍🌙
-</p>
+    <p>
+        Te amo hoje, amanhã e pra sempre.
+        Te amo até a Lua indo e voltando. 🌙❤️
+    </p>
 
-<button class="botao"
-onclick="document.getElementById('inicio').scrollIntoView({behavior:'smooth'})">
-Ver Nossa História
-</button>
+    <button class="botao" onclick="iniciarHistoria()">
+        Ver Nossa História
+    </button>
+
+    <audio id="musica" controls loop>
+        <source src="lua_pablo.mpeg" type="audio/mpeg">
+    </audio>
 
 </div>
 
 <section id="inicio">
 
-<div class="card">
+    <div class="card">
 
-<h2>💌 Minha Mensagem</h2>
+        <h2>💌 Minha Mensagem</h2>
 
-<br>
+        <br>
 
-<p>
-Te amo hoje, amanhã e pra sempre. Te amo até a Lua indo e voltando 😍🌙
-</p>
+        <p>
+            Cada momento ao seu lado se tornou uma lembrança especial.
+            Obrigado por fazer parte da minha vida, por cada sorriso,
+            cada abraço e cada sonho compartilhado.
+            Que nossa história continue sendo escrita com muito amor,
+            cumplicidade e felicidade. ❤️
+        </p>
 
-<div class="contador" id="contador"></div>
+        <div class="contador" id="contador"></div>
 
-</div>
+    </div>
 
 </section>
 
 <section>
 
-<h2>📸 Nossos Momentos</h2>
+    <h2>📸 Nossos Momentos</h2>
 
-<br><br>
+    <br><br>
 
-<div class="galeria">
+    <div class="galeria">
 
-<img src="foto1.jpeg" alt="">
-<img src="foto2.jpeg" alt="">
-<img src="foto3.jpeg" alt="">
-<img src="foto5.jpeg" alt="">
-<img src="foto4.jpeg" alt="">
+        <img src="foto1.jpeg" alt="">
+        <img src="foto2.jpeg" alt="">
+        <img src="foto3.jpeg" alt="">
+        <img src="foto4.jpeg" alt="">
+        <img src="foto5.jpeg" alt="">
 
-</div>
+    </div>
 
 </section>
 
 <footer>
-@versapersonalizados_
+❤️ Feito com amor ❤️
 </footer>
 
 <script>
 
-const inicioRelacionamento =
-new Date("2024-05-04T00:00:00");
+const inicioRelacionamento = new Date("2024-05-04T00:00:00");
 
 function atualizar(){
 
-const hoje = new Date();
+    const hoje = new Date();
 
-const diff =
-hoje - inicioRelacionamento;
+    const diff = hoje - inicioRelacionamento;
 
-const dias =
-Math.floor(diff / (1000*60*60*24));
+    const dias = Math.floor(
+        diff / (1000 * 60 * 60 * 24)
+    );
 
-document.getElementById("contador")
-.innerHTML =
-`❤️ Estamos juntos há ${dias} dias ❤️`;
+    document.getElementById("contador").innerHTML =
+    `❤️ Estamos juntos há ${dias} dias ❤️`;
+
+}
+
+function iniciarHistoria(){
+
+    const musica =
+    document.getElementById("musica");
+
+    musica.play();
+
+    document.getElementById("inicio")
+    .scrollIntoView({
+        behavior:'smooth'
+    });
 
 }
 
